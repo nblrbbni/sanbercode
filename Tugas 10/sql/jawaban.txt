@@ -1,0 +1,41 @@
+Soal 1 Membuat Database
+create database myshop;
+
+Soal 2 Membuat Table di Dalam Database
+create table users (
+    -> id int primary key auto_increment,
+    -> name varchar(255),
+    -> email varchar(255),
+    -> password varchar(255)
+    -> );
+create table categories (
+    -> id int primary key auto_increment,
+    -> name varchar(255)
+    -> );
+create table items (
+    -> id int primary key auto_increment,
+    -> name varchar(255),
+    -> description varchar(255),
+    -> price int,
+    -> stock int,
+    -> category_id int,
+    -> foreign key (category_id) references categories(id)
+    -> );
+
+Soal 3 Memasukkan Data pada Table
+Table users, example:
+insert into users(name, email, password) values("John Doe", "john@doe.com", "john123") ,("Jane Doe", "jane@doe.com", "jenita123");
+
+Table categories :
+insert into categories(name) values("gadget"), ("cloth"), ("men), ("women", ("branded");
+Table Items :
+insert into items(name, description, price, stock, category_id) values("Sumsang b50", "hape keren dari merek sumsang", 4000000, 100, 1), ("Uniklooh", "baju keren dari brand ternama", 500000, 50, 2), ("IMHO Watch", "jam tangan anak yang jujur banget", 2000000, 10, 1);
+
+Soal 4 Mengambil Data dari Database
+a. select id, name, email from users;
+b. select * from items where price > 1000000;
+   select * from items where name like 'uniklo%';
+c. select items.name, items.description, items.price, items.stock, items.category_id, categories.name as kategori from categories inner join items on items.category_id = categories.id;
+
+Soal 5 Mengubah Data dari Database
+update items set price = 2500000 where id=1;
