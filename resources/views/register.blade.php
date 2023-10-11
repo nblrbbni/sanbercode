@@ -1,46 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layout.master')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form</title>
-</head>
+@section('judul')
+<b>Buat Account Baru!</b>
+@endsection
 
-<body>
-    <h1>Buat Account Baru!</h1>
+@section('subjudul')
+<b>Sign Up Form</b>
+@endsection
 
-    <h3>Sign Up Form</h3>
-    <form action="/welcome" method="post">
-        @csrf
-        <label>First Name:</label><br><br>
-        <input type="text" name="firstname"><br><br>
+@section('content')
+<form action="/welcome" method="post">
+    @csrf
+    <label>First Name:</label><br><br>
+    <input type="text" name="firstname"><br><br>
 
-        <label>Last Name:</label><br><br>
-        <input type="text" name="lastname"><br><br>
+    <label>Last Name:</label><br><br>
+    <input type="text" name="lastname"><br><br>
 
-        <label>Gender:</label><br><br>
-        <input type="radio" name="gender">Male<br>
-        <input type="radio" name="gender">Female<br><br>
+    <label>Gender:</label><br><br>
+    <input type="radio" name="gender" value="Male">Male<br>
+    <input type="radio" name="gender" value="Female">Female<br><br>
 
-        <label>Nationality:</label><br><br>
-        <select name="nationality">
-            <option value="indonesian">Indonesian</option>
-            <option value="indonesian">Singaporean</option>
-            <option value="indonesian">Malaysian</option>
-            <option value="indonesian">Australian</option>
-        </select><br><br>
+    <label>Nationality:</label><br><br>
+    <select name="nationality">
+        <option value="Indonesian">Indonesian</option>
+        <option value="Singaporean">Singaporean</option>
+        <option value="Malaysian">Malaysian</option>
+        <option value="Australian">Australian</option>
+    </select><br><br>
 
-        <label>Language Spoken:</label><br><br>
-        <input type="checkbox" name="language" value="Bahasa Indonesia">Bahasa Indonesia<br>
-        <input type="checkbox" name="language" value="English">English<br>
-        <input type="checkbox" name="language" value="Arabic">Arabic<br>
-        <input type="checkbox" name="language" value="Other">Other<br><br>
+    <label>Language Spoken:</label><br><br>
+    <input type="checkbox" name="language" value="Bahasa Indonesia">Bahasa Indonesia<br>
+    <input type="checkbox" name="language" value="English">English<br>
+    <input type="checkbox" name="language" value="Arabic">Arabic<br>
+    <input type="checkbox" name="language" value="Other">Other<br><br>
 
-        <label>Bio:</label><br><br>
-        <textarea name="bio" id="" cols="30" rows="10"></textarea><br><br>
-        <input type="submit" value="Welcome">
-    </form>
-</body>
-
-</html>
+    <label>Bio:</label><br><br>
+    <textarea name="bio" id="" cols="30" rows="10"></textarea><br><br>
+    <input type="submit" value="Welcome">
+</form>
+@endsection
