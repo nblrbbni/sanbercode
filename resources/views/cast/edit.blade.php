@@ -33,6 +33,8 @@
     @error('bio')
     <div class="alert alert-danger">{{ $message }}</div>
     @enderror
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
+    <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+    <a href="/cast" class="btn btn-secondary btn-sm">Kembali</a>
+</form>
+
 @endsection

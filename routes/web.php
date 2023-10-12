@@ -49,3 +49,7 @@ Route::get('/cast/{cast_id}', [CastController::class, 'show']);
 Route::get('/cast/{cast_id}/edit', [CastController::class, 'edit']);
 //Update data ke database berdasarkan id
 Route::put('/cast/{cast_id}', [CastController::class, 'update']);
+
+//Delete
+//Delete berdasarkan id
+Route::delete('/cast/{cast_id}', [CastController::class, 'destroy']);

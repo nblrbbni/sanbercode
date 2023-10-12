@@ -5,17 +5,25 @@
 @endsection
 
 @section('subjudul')
-    Halaman Data Table
+DataTable with default features
 @endsection
 
+@push('scripts')
+    <script>
+        let table = new DataTable('#myTable');
+    </script>
+
+<script src="https://cdn.datatables.net/v/dt/dt-1.13.6/datatables.min.js"></script>
+@endpush
+
+@push('style')
+<link href="https://cdn.datatables.net/v/dt/dt-1.13.6/datatables.min.css" rel="stylesheet">
+@endpush
+
 @section('content')
-<div class="card">
-    <div class="card-header">
-      <h3 class="card-title">DataTable with default features</h3>
-    </div>
     <!-- /.card-header -->
     <div class="card-body">
-      <table id="example1" class="table table-bordered table-striped">
+      <table id="example1" class="table table-bordered table-striped" id="myTable">
         <thead>
         <tr>
           <th>Rendering engine</th>
@@ -446,5 +454,4 @@
       </table>
     </div>
     <!-- /.card-body -->
-</div>
 @endsection

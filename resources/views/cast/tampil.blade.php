@@ -27,8 +27,13 @@
                     <td>{{ $value->nama }}</td>
                     <td>{{ $value->umur }}</td>
                     <td>
-                        <a href="/cast/{{ $value->id }}" class="btn btn-info btn-sm">Detail</a>
-                        <a href="/cast/{{ $value->id }}/edit" class="btn btn-warning btn-sm">Edit</a>
+                        <form action="/cast/{{ $value->id }}" method="post">
+                            @csrf
+                            @method('delete')
+                            <a href="/cast/{{ $value->id }}" class="btn btn-info btn-sm">Detail</a>
+                            <a href="/cast/{{ $value->id }}/edit" class="btn btn-warning btn-sm">Edit</a>
+                            <input type="submit" value="Delete" class="btn btn-danger btn-sm">
+                        </form>
                     </td>
                 </tr>
             @empty

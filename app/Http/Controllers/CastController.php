@@ -70,4 +70,11 @@ class CastController extends Controller
 
         return redirect('/cast');
     }
+
+    public function destroy($id)
+    {
+        DB::table('cast')->where('id', $id)->delete();
+
+        return redirect('/cast');
+    }
 }

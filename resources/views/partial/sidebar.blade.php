@@ -55,6 +55,12 @@
                 <p>Data Table</p>
               </a>
             </li>
+            <li class="nav-item">
+                <a href="/cast" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Cast</p>
+                </a>
+              </li>
           </ul>
         </li>
       </ul>
