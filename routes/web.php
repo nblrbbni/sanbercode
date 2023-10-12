@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CastController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 
@@ -28,3 +29,23 @@ Route::get('/table', function() {
 Route::get('/data-table', function() {
     return view('data-table');
 });
+
+//CRUD Cast
+
+//Create
+//Form Tambah Cast
+Route::get('/cast/create', [CastController::class, 'create']);
+//Untuk kirim data ke database atau tambah data ke database
+Route::post('/cast', [CastController::class, 'store']);
+
+//Read
+//Tampil semua data
+Route::get('/cast', [CastController::class, 'index']);
+//Detail Cast berdasarkan id
+Route::get('/cast/{cast_id}', [CastController::class, 'show']);
+
+//Update
+//Form update cast
+Route::get('/cast/{cast_id}/edit', [CastController::class, 'edit']);
+//Update data ke database berdasarkan id
+Route::put('/cast/{cast_id}', [CastController::class, 'update']);

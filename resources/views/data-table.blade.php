@@ -1,7 +1,7 @@
 @extends('layout.master')
 
 @section('judul')
-    Halaman Data Table
+    <b>Halaman Data Table</b>
 @endsection
 
 @section('subjudul')

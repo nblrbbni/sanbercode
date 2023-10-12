@@ -1,7 +1,7 @@
 @extends('layout.master')
 
 @section('judul')
-Table
+<b>Table</b>
 @endsection
 
 @section('subjudul')
